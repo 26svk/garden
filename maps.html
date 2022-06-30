@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Garden</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+<link href="https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,300;0,400;0,500;1,300;1,600&display=swap" rel="stylesheet">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            font-family: 'Bitter', serif;
+        }
+        .heading {
+            background-image: url(/Users/sakshamvikram/Downloads/DSC_0075.PNG);
+            min-height: 100vh;
+            width:100%;
+            background-position: center;
+            background-size: cover;
+            position: relative;
+        }
+        nav {
+            display: flex;
+            padding: 2% 6%;
+            justify-content: space-between;
+            align-items: center;
+        }
+        nav img {
+            width: 150px;
+        }
+        .nav-links{
+            flex: 1;
+            text-align: right;
+        }
+        .nav-links ul li {
+            list-style: none;
+            display: inline-block;
+            padding: 8px 12px;
+            position: relative;
+        }
+        .nav-links ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 18px;
+        }
+        .nav-links ul li::after{
+            content: '';
+            width: 0%;
+            height: 2px;
+            background: #23AC25;
+            display: block;
+            margin: auto;
+            transition: 0.5s;
+        }
+        .nav-links ul li:hover::after {
+            width: 100%;
+        }
+        .text-box {
+            width: 90%;
+            color: white;
+            position: absolute;
+            top: 50%;
+            right: -52%;
+            transform: translate(-50%,-50%);
+            text-align: center;
+        }
+        .text-box h1 {
+            font-size: 62px;
+        }
+        .text-box p {
+            margin: 10px 0 40px;
+            font-size: 18px;
+            color: #fff;
+        }
+        .hero-btn {
+            display: inline-block;
+            text-decoration: none;
+            color: #fff;
+            border: 1px solid #fff;
+            padding: 12px 34px;
+            font-size: 13px;
+            background: transparent;
+            position: relative;
+            cursor: pointer;
+            transition: 1s;
+        }
+        .hero-btn:hover {
+            border: 1px solid#23AC25;
+            background: #23AC25;
+            transition: 1s;
+        }
+        nav .fa {
+            display: none;
+        }
+        @media (max-width: 700px) {
+            .text-box h1 {
+            font-size: 20px;
+            }
+            .nav-links ul li {
+                display:block;
+            }
+            .nav-links{
+                position: absolute;
+                background: #23AC25;
+                height: 100vh;
+                width: 200px;
+                top: 0;
+                right: -200;
+                text-align: left;
+                z-index: 2;
+                transition: 1s;
+            }
+            nav .fa{
+                display: block;
+                color: #fff;
+                margin: 10px;
+                font-size: 22px;
+                cursor: pointer;
+            }
+            .nav-links ul{
+                padding: 30px;
+
+            }
+        }
+        @media (max-width: 700px) {
+        .row{
+            flex-direction: column;
+        }
+    }
+    .row {
+        margin-top: 5%;
+        display: flex;
+        justify-content: space-between;
+    }
+    .species {
+        width: 80%;
+        margin: auto;
+        text-align: center;
+        padding-top: 100px;
+    }
+    h1 {
+        font-size: 36px;
+        font-weight: 600;
+    }
+    p{
+        color: 777;
+        font-size: 14;
+        font-weight: 300;
+        line-height: 22px;
+        padding: 10px;
+    }
+    .row {
+        margin-top: 5%;
+        display: flex;
+        justify-content: space-between;
+    }
+    .species-col{
+        flex-basis: 35%;
+        background-color: #f5fff3;
+        border-radius: 10px;
+        margin: 5%;
+        padding: 20px 12px;
+        box-sizing: border-box;
+        transition: 0.5s;
+    }
+    h3{
+        text-align: center;
+        font-weight: 600;
+        margin: 10px 0;
+    }
+    .species-col:hover{
+        box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.2);
+    }
+    @media (max-width: 700px) {
+        .row{
+            flex-direction: column;
+        }
+    }
+     /*----Facilities----*/
+     .Facilities{
+        width:80%;
+        margin: auto;
+        text-align: center;
+        padding-top: 100px;
+
+    }
+    .facilities-col{
+        flex-basis: 31%;
+        border-radius: 10px;
+        margin-bottom: 5%;
+        text-align: center;
+    }
+    .facilities-col img{
+        width: 100%;
+        border-radius: 10px;
+    }
+    .facilities-col p{
+        padding: 0;
+    }
+    .facilities-col h3{
+        margin-top: 16px;
+        margin-bottom: 15px;
+        text-align: center;
+    }
+ 
+/*--footer--*/
+.footer{
+    width: 100%;
+    text-align: center;
+    padding: 30px 0;
+}
+.footer h4{
+    margin-bottom: 25px;
+    margin-top: 20px;
+    font-weight: 600;
+}
+.icons .fa{
+    color: #23AC25;
+    margin: 0 13px;
+    cursor: pointer;
+    padding: 18px 0;
+}
+.fa-heart-o{
+    color: #f44336;
+}
+/*--about us page--*/
+.sub-heading {
+    height: 50vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url(/Users/sakshamvikram/Desktop/DSC_0064.JPG);
+    background-position: center;
+    background-size: cover;
+    text-align: center;
+    color: white;
+}
+.sub-heading h1{
+    margin-top: 100px;
+}
+.about-us{
+    width: 80%;
+    margin: auto;
+    padding-top: 80px;
+    padding-bottom: 50px;
+}
+.about-col{
+    flex-basis: 48%;
+    padding: 30px 2px;
+}
+.about-us img{
+    width: 100%;
+
+}
+.about-col h1{
+    padding-top: 0;
+
+}
+.about-col p{
+    padding: 15px 0 25px;
+}
+.red-btn{
+    border: 1px solid #23AC25;
+    background: transparent;
+    color: #23AC25;
+}
+.red-btn:hover{
+    color:#fff
+}
+
+
+    </style>
+</head>
+<body>
+    
+   <section class="sub-heading">
+    <nav>
+        <a href="index.html"><img src="/Users/sakshamvikram/Downloads/logo.png"></a>
+        <div class="nav-links" id="navLinks">
+            <i class="fa fa-times" onclick="hideMenu()"></i>
+            <ul>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="species.html">SPECIES</a></li>
+                <li><a href="maps.html">MAPS</a></li>
+                <li><a href="about.html">ABOUT</a></li>
+                <li><a href="contact.html">CONTACT</a></li>
+
+            </ul>
+
+        </div>
+        <i class="fa fa-bars" onclick="showMenu()"></i>
+    </nav>
+    <h1>Our Species</h1>
+    
+</section>
+<!--Course-->
+<section class="species">
+    <h1>Species in the Garden</h1>
+    <p>The Vend Utca 12 Garden is very biodiverse, containing many types of plants, animals, and insects!</p>
+
+    <div class="row">
+        <div class="species-col">
+            <h3>Plants</h3>
+            <p>There are a variety of Plants in the Garden, ranging from Bamboo to the European Plum. <br>
+                Flowers, ferns, trees, bushes, shrubs, and fruits are the main features of the garden, making it a great place to be! </p>
+        </div>
+        <div class="species-col">
+            <h3>Animals</h3>
+            <p>There are a variety of Animals in the Garden, ranging from Domestic Cats to the Red Squirrel. <br>
+                A family of a few cats, all of different patterns and colors, gather in our garden to have a meal or play around. <br>Squirrels, birds, and lizards make themselves home too!</p>
+        </div>
+        <div class="species-col">
+            <h3>Insects</h3>
+            <p>There are a variety of Insects in the Garden, ranging from the Asian Lady Beetle to Southern Oak Bush-Cricket. <br>
+                Insects can be found in every direction here. Some are too small to get easily noticed, while others,<br> such as the Bumblebee buzz around all day! </p>
+        </div>
+
+    </div>
+
+</section>
+
+<!--Facilities-->
+
+<section class="Facilities">
+    <h1>Our Facilities</h1>
+    <p>Though our garden has so many natural elements, many man-made components make in beautiful as well!</p>
+
+    <div class="row">
+        <div class="facilities-col">
+            <img src="/Users/sakshamvikram/Desktop/DSC_0055.JPG">
+            <h3>Water Fountains</h3>
+            <p>The garden sports a water fountain in the center. <br>However, for the past 2.5 years, the water fountain has been under maintainance <br>
+                due to problems with the pipelines. <br>
+                <marquee style="color:red"> <strong>!Currently Closed!</strong> </marquee></p>
+        </div>
+        <div class="facilities-col">
+            <img src="/Users/sakshamvikram/Desktop/DSC_0283.JPG">
+            <h3>Walkways</h3>
+            <p>Easily get to parts of the garden with multiple walkways.</p>
+        </div>
+        <div class="facilities-col">
+            <img src="/Users/sakshamvikram/Desktop/DSC_0047.JPG">
+            <h3>Patio</h3>
+            <p>Shaded by apple and pomegranate trees around it, the patio is a great <br> place to enjoy the view of the garden while relaxing.</p>
+        </div>
+    </div>
+
+</section>
+
+
+
+<section class="footer">
+    <h4>About Us</h4>
+    <p>A large, biodiverse, and nature-filled backyard at Vend Utca 12, <br> dedicated to keeping the Garden thriving. </p>
+    <div class="icons">
+        <i class="fa fa-facebook"></i>
+        <i class="fa fa-twitter"></i>
+        <i class="fa fa-instagram"></i>
+        <i class="fa fa-linkedin"></i>
+        <i class="fa fa-telegram"></i>
+        <i class="fa fa-youtube"></i>
+    </div>
+    <p>Made with <i class="fa fa-heart-o"></i>  by Saksham Vikram</p>
+</section>
+
+
+
+
+
+
+
+<!-----Javascript for Toggle Menu----->
+<script>
+ 
+    var navLinks= document.getElementById("navLinks")
+    function showMenu() {
+        navLinks.style.right = "0";
+    }
+    function hideMenu() {
+        navLinks.style.right = "-200px";
+    }
+</script>
+</body>
+</html>
