@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Garden</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+<link href="https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,300;0,400;0,500;1,300;1,600&display=swap" rel="stylesheet">
+</head>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            font-family: 'Bitter', serif;
+        }
+        .heading {
+            background-image: url(/Users/sakshamvikram/Desktop/DSC_0099.PNG);
+            min-height: 100vh;
+            width:100%;
+            background-position: center;
+            background-size: cover;
+            position: relative;
+        }
+        
+        nav {
+            display: flex;
+            padding: 2% 6%;
+            justify-content: space-between;
+            align-items: center;
+        }
+        nav img {
+            width: 150px;
+        }
+        .nav-links{
+            flex: 1;
+            text-align: right;
+        }
+        .nav-links ul li {
+            list-style: none;
+            display: inline-block;
+            padding: 8px 12px;
+            position: relative;
+        }
+        .nav-links ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 18px;
+        }
+        .nav-links ul li::after{
+            content: '';
+            width: 0%;
+            height: 2px;
+            background: #23AC25;
+            display: block;
+            margin: auto;
+            transition: 0.5s;
+        }
+        .nav-links ul li:hover::after {
+            width: 100%;
+        }
+        .text-box {
+            width: 90%;
+            color: white;
+            position: absolute;
+            top: 50%;
+            right: -52%;
+            transform: translate(-50%,-50%);
+            text-align: center;
+        }
+        .text-box h1 {
+            font-size: 62px;
+        }
+        .text-box p {
+            margin: 10px 0 40px;
+            font-size: 18px;
+            color: #fff;
+        }
+        .hero-btn {
+            display: inline-block;
+            text-decoration: none;
+            color: #fff;
+            border: 1px solid #fff;
+            padding: 12px 34px;
+            font-size: 13px;
+            background: transparent;
+            position: relative;
+            cursor: pointer;
+            transition: 1s;
+        }
+        .hero-btn:hover {
+            border: 1px solid#23AC25;
+            background: #23AC25;
+            transition: 1s;
+        }
+        nav .fa {
+            display: none;
+        }
+        @media (max-width: 700px) {
+            .text-box h1 {
+            font-size: 20px;
+            }
+            .nav-links ul li {
+                display:block;
+            }
+            .nav-links{
+                position: absolute;
+                background: #23AC25;
+                height: 100vh;
+                width: 200px;
+                top: 0;
+                right: -200px;
+                text-align: left;
+                z-index: 2;
+                transition: 1s;
+            }
+            nav .fa{
+                display: block;
+                color: #fff;
+                margin: 10px;
+                font-size: 22px;
+                cursor: pointer;
+            }
+            .nav-links ul{
+                padding: 30px;
+
+            }
+        }
+        @media (max-width: 700px) {
+        .row{
+            flex-direction: column;
+        }
+    }
+    .row {
+        margin-top: 5%;
+        display: flex;
+        justify-content: space-between;
+    }
+    .species {
+        width: 80%;
+        margin: auto;
+        text-align: center;
+        padding-top: 100px;
+    }
+    h1 {
+        font-size: 36px;
+        font-weight: 600;
+    }
+    p{
+        color: 777;
+        font-size: 14;
+        font-weight: 300;
+        line-height: 22px;
+        padding: 10px;
+    }
+    .row {
+        margin-top: 5%;
+        display: flex;
+        justify-content: space-between;
+    }
+    .species-col{
+        flex-basis: 35%;
+        background-color: #f5fff3;
+        border-radius: 10px;
+        margin: 5%;
+        padding: 20px 12px;
+        box-sizing: border-box;
+        transition: 0.5s;
+        
+    }
+    h3{
+        text-align: center;
+        font-weight: 600;
+        margin: 10px 0;
+    }
+    .species-col:hover{
+        box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.2);
+    }
+    @media (max-width: 700px) {
+        .row{
+            flex-direction: column;
+        }
+    }
+    /*--maps--*/
+    .maps{
+        width: 80%;
+        margin: auto;
+        text-align: center;
+        padding-top: 50px;
+    }
+    .maps-col{
+        flex-basis: 32%;
+        border-radius: 10px;
+        margin-bottom: 30px;
+        position: relative;
+        overflow: hidden;
+    }
+    .maps-col img {
+        width: 100%;
+        display: block;
+    }
+    .layer{
+        background: transparent;
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        transition: 0.5s;
+    }
+    .layer:hover{
+        background: rgba(0, 226, 53, 0.6);
+    }
+    .layer h3{
+        width: 100%;
+        font-weight: 500;
+        color: white;
+        font-size: 26px;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        position: absolute;
+        opacity: 0;
+        transition: 1s;
+    }
+    .layer:hover h3{
+        bottom: 49%;
+        opacity: 1;
+    }
+    /*--testimonials*/
+    .testimonials{
+        width: 80%;
+        margin: auto;
+        padding-top: 100px;
+        text-align: center;
+    }
+    .testimonial-col{
+         flex-basis: 44%;
+         border-radius: 10px;
+         margin-bottom: 5%;
+         text-align: left;
+         background:  #f5fff3;
+         padding: 25px;
+         cursor: pointer;
+         display: flex;
+     }
+     .testimonial-col img{
+         height: 40px;
+         margin-left: 5px;
+         margin-right: 30px;
+         border-radius: 50%;
+     }
+     .testimonial-col p{
+         padding: 0;
+
+     }
+    .testimonial-col h3{
+        margin-top: 15px;
+        text-align: center;
+    }
+    .testimonial-col .fa{
+        color: #23AC25;
+    }
+    @media(max-width: 700px){
+        .testimonial-col img{
+         margin-left: 0px;
+         margin-right: 15px;
+     }
+    }
+     /*----Facilities----*/
+     .Facilities{
+        width:80%;
+        margin: auto;
+        text-align: center;
+        padding-top: 100px;
+
+    }
+    .facilities-col{
+        flex-basis: 31%;
+        border-radius: 10px;
+        margin-bottom: 5%;
+        text-align: center;
+    }
+    .facilities-col img{
+        width: 100%;
+        border-radius: 10px;
+    }
+    .facilities-col p{
+        padding: 0;
+    }
+    .facilities-col h3{
+        margin-top: 16px;
+        margin-bottom: 15px;
+        text-align: center;
+    }
+    
+/*CTA*/
+.cta{
+    margin: 100px auto;
+    width: 80%;
+    background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)), url(/Users/sakshamvikram/Desktop/DSC_0087.JPG);
+    background-position: center;
+    background-size: cover;
+    border-radius: 10px;
+    text-align: center;
+    padding: 100px 0;
+}
+.cta h1{
+    color: white;
+    margin-bottom: 40px;
+    padding: 0;
+}
+@media(max-width: 700px){
+    .cta h1{
+        font-size: 24px;
+    }
+}
+
+ 
+/*--footer--*/
+.comment-box{
+    border: 1px solid #ccc;
+    margin: 50px 0;
+    padding: 10px 20px;
+}
+.comment-box h3{
+    text-align: left;
+}
+.comment-form input, .comment-box textarea{
+    width: 100%;
+    padding: 10px;
+    margin: 15px 0;
+    box-sizing: border-box;
+    border: none;
+    outline: none;
+    background: #f0f0f0;
+}
+.comment-form button{
+    margin: 10px 0;
+}
+.footer{
+    width: 100%;
+    text-align: center;
+    padding: 30px 0;
+}
+.footer h4{
+    margin-bottom: 25px;
+    margin-top: 20px;
+    font-weight: 600;
+}
+.icons .fa{
+    color: #23AC25;
+    margin: 0 13px;
+    cursor: pointer;
+    padding: 18px 0;
+}
+.fa-heart-o{
+    color: #f44336;
+}
+/*--about us page--*/
+.sub-heading {
+    height: 50vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url(/Users/sakshamvikram/Desktop/DSC_0064.JPG);
+    background-position: center;
+    background-size: cover;
+    text-align: center;
+    color: white;
+}
+.sub-heading h1{
+    margin-top: 100px;
+}
+.about-us{
+    width: 80%;
+    margin: auto;
+    padding-top: 80px;
+    padding-bottom: 50px;
+}
+.about-col{
+    flex-basis: 48%;
+    padding: 30px 2px;
+}
+.about-us img{
+    width: 100%;
+
+}
+.about-col h1{
+    padding-top: 0;
+
+}
+.about-col p{
+    padding: 15px 0 25px;
+}
+.red-btn{
+    border: 1px solid #23AC25;
+    background: transparent;
+    color: #23AC25;
+}
+.red-btn:hover{
+    color:#fff
+}
+</style> 
+
+<Section class="heading">
+    <nav>
+        <a href="index.html"><img src="/Users/sakshamvikram/Desktop/logo.png"></a>
+        <div class="nav-links" id="navLinks">
+            <i class="fa fa-times" onclick="hideMenu()"></i>
+            <ul>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="species.html">SPECIES</a></li>
+                <li><a href="maps.html">MAPS</a></li>
+                <li><a href="about.html">ABOUT</a></li>
+                <li><a href="contact.html">CONTACT</a></li>
+
+
+            </ul>
+
+        </div>
+        <i class="fa fa-bars" onclick="showMenu()"></i>
+    </nav>
+
+    <div class="text-box">
+        <h1>Our Garden</h1>
+        <p>A biodiverse and beautiful backyard <br> at Vend Utca 12, Budapest.</p>
+        <a href="contact.html" class="hero-btn">Learn More</a>
+    </div>
+</Section>
+<!--Species-->
+<section class="species">
+    <h1>Species in the Garden</h1>
+<p>Many different Plants, Animals, and Insects make themselves home at the Vend Utca 12 Garden!</p>
+
+    <div class="row">
+        <div class="row">
+            <div class="species-col">
+                <h3>Plants</h3>
+                <p>There are a variety of Plants in the Garden, ranging from Bamboo to the European Plum. <br>
+                    Flowers, ferns, trees, bushes, shrubs, and fruits are the main features of the garden, making it a great place to be! </p>
+            </div>
+            <div class="species-col">
+                <h3>Animals</h3>
+                <p>There are a variety of Animals in the Garden, ranging from Domestic Cats to the Red Squirrel. <br>
+                    A family of a few cats, all of different patterns and colors, gather in our garden to have a meal or play around. <br>Squirrels, birds, and lizards make themselves home too!</p>
+            </div>
+            <div class="species-col">
+               <h3>Insects</h3>
+                <p>There are a variety of Insects in the Garden, ranging from the Asian Lady Beetle to Southern Oak Bush-Cricket. <br>
+                    Insects can be found in every direction here. Some are too small to get easily noticed, while others,<br> such as the Bumblebee buzz around all day! </p>
+            </div>
+    
+        </div>
+</section>
+<!--Maps-->
+<section class="maps">
+    <h1>The Garden Map</h1>
+    <p>How the Garden is Layed Out and Where the Species Reside</p>
+    <div class="row">
+        <div class="maps-col">
+            <img src="/Users/sakshamvikram/Desktop/Screenshot 2022-06-19 at 18.48.28.png">
+            <div class="layer">
+                <h3>DRIVEWAY</h3>
+            </div>
+        </div>
+        <div class="maps-col">
+            <img src="/Users/sakshamvikram/Desktop/Webp.net-resizeimage.png">
+            <div class="layer">
+                <h3>LAWN</h3>
+            </div>
+        </div>
+        <div class="maps-col">
+            <img src="/Users/sakshamvikram/Desktop/Webp.net-resizeimage (1).png">
+            <div class="layer">
+                <h3>BACKYARD</h3>
+            </div>
+        </div>
+    </div>
+</section>
+<!--Facilities-->
+
+<section class="Facilities">
+    <h1>Our Facilities</h1>
+    <p>Though our garden has so many natural elements, many man-made components make in beautiful as well!</p>
+
+    <div class="row">
+        <div class="facilities-col">
+            <img src="/Users/sakshamvikram/Desktop/DSC_0055.JPG">
+            <h3>Water Fountains</h3>
+            <p>The garden sports a water fountain in the center. <br>However, for the past 2.5 years, the water fountain has been under maintainance <br>
+                due to problems with the pipelines. <br>
+                <marquee style="color:red" behavior="alternative"> <strong>!Currently Closed!</strong> </marquee></p>
+        </div>
+        <div class="facilities-col">
+            <img src="/Users/sakshamvikram/Desktop/DSC_0283.JPG">
+            <h3>Walkways</h3>
+            <p>Easily get to parts of the garden with multiple walkways.</p>
+        </div>
+        <div class="facilities-col">
+            <img src="/Users/sakshamvikram/Desktop/DSC_0047.JPG">
+            <h3>Patio</h3>
+            <p>Shaded by apple and pomegranate trees around it, the patio is a great <br> place to enjoy the view of the garden while relaxing.</p>
+        </div>
+    </div>
+
+</section>
+
+
+
+
+<!--testimonials-->
+<section class="testimonials">
+    <h1>What People Have To Say </h1>
+    <p>Responses from People Who Have Visited the Garden!</p>
+
+    <div class="row">
+        <div class="testimonial-col">
+            <img src="/Users/sakshamvikram/Desktop/Photo 2020. 12. 22. 13 13 30.JPG">
+            <div>
+                <marquee style="color:#f44336"><p>Waiting for Response</p></marquee>
+                <h3>Sudhanshu Vikram</h3>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star-o"></i>
+            </div>
+    </div>
+        <div class="testimonial-col">
+            <img src="/Users/sakshamvikram/Desktop/Webp.net-resizeimage.jpg">
+            <div>
+                <marquee style="color:#f44336"><p>Waiting for Response</p></marquee>
+                <h3>Shaurya Vikram</h3>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star-half-o"></i>
+            </div>
+        </div>
+    
+</section>
+
+
+
+<!--Call to action-->
+
+<section class="cta">
+    <h1>Visit the Vend Utca 12 Garden <br> Today for Free</h1>
+    <a href="contact.html" class="hero-btn">CONTACT US</a>
+</section>
+
+<!--footer-->
+<section class="footer">
+    <h4>About Us</h4>
+    <p>A large, biodiverse, and nature-filled backyard at Vend Utca 12, <br> dedicated to keeping the Garden thriving. </p>
+    <div class="icons">
+        <i class="fa fa-facebook"></i>
+        <i class="fa fa-twitter"></i>
+        <i class="fa fa-instagram"></i>
+        <i class="fa fa-linkedin"></i>
+        <i class="fa fa-telegram"></i>
+        <i class="fa fa-youtube"></i>
+    </div>
+    <p>Made with <i class="fa fa-heart-o"></i>  by Saksham Vikram</p>
+</section>
+
+<!-----Javascript for Toggle Menu----->
+<section>
+<script>
+ 
+    var navLinks= document.getElementById("navLinks")
+    function showMenu() {
+        navLinks.style.right = "0";
+    }
+    function hideMenu() {
+        navLinks.style.right = "-200px";
+    }
+</script>
+</section>
+
+
+
+
+
+</body>
+</html> 
