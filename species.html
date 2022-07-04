@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Species</title>
+    <title>Plants</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com"> 
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
@@ -16,7 +16,7 @@
             font-family: 'Bitter', serif;
         }
         .heading {
-            background-image: url(DSC_0075.PNG);
+            background-image: url(./DSC_0075.PNG);
             min-height: 100vh;
             width:100%;
             background-position: center;
@@ -88,10 +88,21 @@
             cursor: pointer;
             transition: 1s;
         }
+        .hero-btn1 {
+            border-radius: 10px;
+            transition: 1s;
+        }
         .hero-btn:hover {
             border: 1px solid#23AC25;
             background: #23AC25;
             transition: 1s;
+            
+        }
+        .hero-btn1:hover {
+            border: 1px solid#23AC25;
+            background: #23AC25;
+            transition: 1s;
+            border-radius: 20px;
         }
         nav .fa {
             display: none;
@@ -159,14 +170,13 @@
         justify-content: space-between;
     }
     .species-col{
-        flex-basis: 35%;
+        flex-basis: 95%;
         background-color: #f5fff3;
-        border-radius: 10px;
-        margin: 5%;
+        border-radius: 20px;
+        margin: 0.5%;
         padding: 20px 12px;
         box-sizing: border-box;
         transition: 0.5s;
-        
     }
     h3{
         text-align: center;
@@ -181,7 +191,68 @@
             flex-direction: column;
         }
     }
-     /*----Facilities----*/
+    /*----Plants----*/
+        /*-Trees-*/
+        .trees{
+         width: 80%;
+         margin: auto;
+         text-align: center;
+         padding-top: 100px;
+    }
+        .trees-col{
+        flex-basis: 95%;
+        background-color: #f5fff3;
+        border-radius: 20px;
+        margin: 0.5%;
+        padding: 20px 12px;
+        box-sizing: border-box;
+        transition: 0.5s;
+        }
+        .trees-col:hover{
+        box-shadow: 0 0 20px 0px rgba(0, 0, 0, 20);
+    }
+        .trees-col p{
+            padding: 0;
+            text-align: center;
+            padding-bottom: 20px;
+
+        }
+        .trees-col img{
+            border-radius: 10px;
+            width: 100%;
+        }
+        /*-flowers-*/
+        .flowers{
+         width: 80%;
+         margin: auto;
+         text-align: center;
+         padding-top: 100px;
+        }
+        .flowers-col{
+        flex-basis: 95%;
+        background-color: #f5fff3;
+        border-radius: 20px;
+        margin: 0.5%;
+        padding: 20px 12px;
+        box-sizing: border-box;
+        transition: 0.5s;
+        }
+        .flowers-col:hover{
+        box-shadow: 0 0 20px 0px rgba(0, 0, 0, 20);
+    }
+        .flowers-col p{
+            padding: 0;
+            text-align: center;
+            padding-bottom: 20px;
+            font-size: 20px;
+        }
+        .flowers-col img{
+            border-radius: 10px;
+            width: 60%;
+        }
+       
+        
+        /*----Facilities----*/
      .Facilities{
         width:80%;
         margin: auto;
@@ -209,26 +280,6 @@
     }
  
 /*--footer--*/
-.comment-box{
-    border: 1px solid #ccc;
-    margin: 50px 0;
-    padding: 10px 20px;
-}
-.comment-box h3{
-    text-align: left;
-}
-.comment-form input, .comment-box textarea{
-    width: 100%;
-    padding: 10px;
-    margin: 15px 0;
-    box-sizing: border-box;
-    border: none;
-    outline: none;
-    background: #f0f0f0;
-}
-.comment-form button{
-    margin: 10px 0;
-}
 .footer{
     width: 100%;
     text-align: center;
@@ -252,7 +303,7 @@
 .sub-heading {
     height: 50vh;
     width: 100%;
-    background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url(./DSC_0089.JPG);
+    background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url(./DSC_0064.JPG);
     background-position: center;
     background-size: cover;
     text-align: center;
@@ -292,6 +343,7 @@
 }
 
 
+
     </style>
 </head>
 <body>
@@ -314,48 +366,88 @@
         </div>
         <i class="fa fa-bars" onclick="showMenu()"></i>
     </nav>
-    <h1>Our Species</h1>
+    <h1>Plants</h1>
     
 </section>
-<!--Course-->
-<section class="species">
-    <h1>Species in the Garden</h1>
-    <p>The Vend Utca 12 Garden is very biodiverse, containing many types of plants, animals, and insects!</p>
-
-    <div class="row">
-        <div class="species-col">
-            <a href="plants.html"><h3>Plants</h3></a>
-            <p>There are a variety of Plants in the Garden, ranging from Bamboo to the European Plum. <br>
-                Flowers, ferns, trees, bushes, shrubs, and fruits are the main features of the garden, making it a great place to be! </p>
-        </div>
-        <div class="species-col">
-            <a href="animals.html"><h3>Animals</h3></a>
-            <p>There are a variety of Animals in the Garden, ranging from Domestic Cats to the Red Squirrel. <br>
-                A family of a few cats, all of different patterns and colors, gather in our garden to have a meal or play around. <br>Squirrels, birds, and lizards make themselves home too!</p>
-        </div>
-        <div class="species-col">
-           <a href="insects.html"><h3>Insects</h3></a> 
-            <p>There are a variety of Insects in the Garden, ranging from the Asian Lady Beetle to Southern Oak Bush-Cricket. <br>
-                Insects can be found in every direction here. Some are too small to get easily noticed, while others,<br> such as the Bumblebee buzz around all day! </p>
-        </div>
-
-    </div>
-
-    <div class="comment-box">
-
-        <h3>Leave a Comment</h3>
-        <form class="comment-form">
-            <input type="text" placeholder="Full Name">
-            <input type="email" placeholder="Enter Email">
-            <textarea rows="5" placeholder="Your Comment"></textarea>
-            <button type="submit" class="hero-btn red-btn">POST YOUR COMMENT</button>
-        </form>
-    </div>
-
-</section>
+<!--Plants-->
+    <!--Trees-->
+        <section class="trees hero-btn1">
+            <h1>Trees</h1>
+            <p>There are many kinds of trees at Vend Utca, including deciduous trees such as the Norway Maple or coniferous trees such as Thuja. </p>
+            <div class="row">
+                <div class="trees-col">
+                   <a href="https://en.wikipedia.org/wiki/Deciduous"><h2>Deciduous</h2></a>
+                    <img src="Webp.net-resizeimage (2).jpg">
+                    <a class="hero-btn1" href="https://en.wikipedia.org/wiki/Prunus_cerasifera"><p>CHERRY PLUM - <em>Prunus cerasifera</em></p></a>
+                    <img src="Webp.net-resizeimage copy.jpg">
+                    <a href="https://en.wikipedia.org/wiki/Acer_platanoides"><p>NORWAY MAPLE - <em>Acer platanoides</em></p></a>
+                    <img src="DSC_0031.JPG">
+                    <a href="https://pfaf.org/User/Plant.aspx?LatinName=Malus+pumila"><p>PARADISE APPLE - <em>Malus pumila</em></p></a>
+                    <img src="DSC_0081.JPG">
+                    <a href="https://en.wikipedia.org/wiki/Plum"><p>PLUM - <em>Prunus subg</em></p></a>
+                    <img src="DSC_0080.JPG">
+                    <a href="https://en.wikipedia.org/wiki/Walnut"><p>WALNUT - <em>Juglans regia</em></p></a>
 
 
+                </div>
+                <div class="trees-col">
+                    <a href="https://en.wikipedia.org/wiki/Coniferous"><h2>Coniferous</h2></a>
+                    <img src="DSC_0065.JPG">
+                    <a href="https://en.wikipedia.org/wiki/Platycladus"><p>CHINESE ARBORVITAE - <em>Platycladus</em></p></a>
+                    <img src="DSC_0052.JPG">
+                    <a href="https://en.wikipedia.org/wiki/Pinus_sylvestris"><p>SCOTS PINE - <em>Pinus sylvestris</em></p></a>
+                    <img src="DSC_0076.JPG">
+                    <a href="https://en.wikipedia.org/wiki/Chamaecyparis_lawsoniana"><p>LAWSON'S CYPRESS - <em>Chamaecyparis lawsoniana</em></p></a>
+                    <img src="DSC_0073.JPG">
+                    <a href="https://en.wikipedia.org/wiki/Juniperus_scopulorum"><p>ROCKY MOUNTAIN JUNIPER - <em>Juniperus scopulorum</em></p></a>
+                    <img src="DSC_0075.JPG">
+                    <a href="https://en.wikipedia.org/wiki/Callitropsis_nootkatensis"><p>NOOTKA CYPRESS - <em>Callitropsis nootkatensis</em></p></a>
+                   
 
+
+                 
+                </div>
+        </section>
+<!--flowers-->
+        <section class="flowers hero-btn1">
+            <h1>Flowers</h1>
+            <p>Flowers make the Garden much more vibrant and provide plenty of nectar to the many polinators that chose to come here.</p>
+            <div class="row">
+                <div class="flowers-col">
+                    <a href="https://en.wikipedia.org/wiki/Flower"><h2>Flowers</h2></a>
+                    <img src="./DSC_0024.JPG">
+                    <a href="https://en.wikipedia.org/wiki/Rosa_chinensis"><p>CHINA ROSE - <em>Rosa chinensis</em></p></a>
+                    <img src="./DSC_0019.JPG">
+                    <a href="https://en.wikipedia.org/wiki/Rosa_chinensis"><p>BENGAL/CHINA ROSE - <em>Rosa chinensis</p></a>
+                    <img src="./DSC_0005.JPG">
+                    <a href="https://en.wikipedia.org/wiki/Hybrid_tea_rose"><p>TEA ROSE - <em>Rosa hybrid</em></p></a>
+                    <img src="./DSC_0141.JPG">
+                    <a href="https://en.wikipedia.org/wiki/Taraxacum_officinale"><p>COMMON DANDELION - <em>Taraxacum officinale</em></p></a>
+                    <img src="./DSC_0146.JPG">
+                    <a href="https://en.wikipedia.org/wiki/Pomegranate"><p>POMERGANATE - <em>Punica granatum</em></p></a>
+                    <img src="./DSC_0147.JPG">
+                    <a href="https://en.wikipedia.org/wiki/Bellis_perennis"><p>COMMON DAISY - <em>Bellis perennis</em></p></a>
+                    <img src="./DSC_0149.JPG">
+                    <a href="https://en.wikipedia.org/wiki/Hibiscus_syriacus"><p>COMMON HIBISCUS - <em>Hibiscus syriacus</em></p></a>
+                    <img src="./DSC_0150.JPG">
+                    <a href="https://en.wikipedia.org/wiki/Blakcberry"><p>BLACKBERRY - <em>Rubus fruticosus</em></p></a>
+                    <img src="./DSC_0153.JPG">
+                    <a href="https://en.wikipedia.org/wiki/Lavandula"><p>LAVENDAR - <em>Lavandula</em></p></a>
+                </div>
+               
+
+
+
+
+
+            </div>
+
+
+
+
+        </section>
+
+<!--footer-->
 
 
 <section class="footer">
