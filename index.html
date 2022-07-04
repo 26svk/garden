@@ -17,7 +17,7 @@
             font-family: 'Bitter', serif;
         }
         .heading {
-            background-image: url(/Users/sakshamvikram/Desktop/DSC_0099.PNG);
+            background-image: url(./DSC_0099.PNG);
             min-height: 100vh;
             width:100%;
             background-position: center;
@@ -401,11 +401,74 @@
 .red-btn:hover{
     color:#fff
 }
+
+
+
+
+
+.scroll-down {
+  opacity: 1;
+  -webkit-transition: all .5s ease-in 3s;
+  transition: all .5s ease-in 3s;
+}
+
+.scroll-down {
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  margin-left: -16px;
+  display: block;
+  width: 32px;
+  height: 32px;
+  border: 6px solid #23AC25;
+  background-size: 14px auto;
+  border-radius: 50%;
+  z-index: 2;
+  -webkit-animation: bounce 2s infinite 2s;
+  animation: bounce 2s infinite 2s;
+  -webkit-transition: all .2s ease-in;
+  transition: all .2s ease-in;
+}
+
+.scroll-down:before {
+    position: absolute;
+    top: calc(50% - 8px);
+    left: calc(50% - 6px);
+    transform: rotate(-45deg);
+    display: block;
+    width: 12px;
+    height: 12px;
+    content: "";
+    border: 4px solid white;
+    border-width: 0px 0 2px 2px;
+}
+
+@keyframes bounce {
+  0%,
+  100%,
+  20%,
+  50%,
+  80% {
+    -webkit-transform: translateY(0);
+    -ms-transform: translateY(0);
+    transform: translateY(0);
+  }
+  40% {
+    -webkit-transform: translateY(-10px);
+    -ms-transform: translateY(-10px);
+    transform: translateY(-10px);
+  }
+  60% {
+    -webkit-transform: translateY(-5px);
+    -ms-transform: translateY(-5px);
+    transform: translateY(-5px);
+  }
+}
 </style> 
 
 <Section class="heading">
     <nav>
-        <a href="index.html"><img src="/Users/sakshamvikram/Desktop/logo.png"></a>
+        <a href="index.html"><img src="logo.png"></a>
         <div class="nav-links" id="navLinks">
             <i class="fa fa-times" onclick="hideMenu()"></i>
             <ul>
@@ -427,6 +490,12 @@
         <p>A biodiverse and beautiful backyard <br> at Vend Utca 12, Budapest.</p>
         <a href="contact.html" class="hero-btn">Learn More</a>
     </div>
+    <section>
+       
+        <a href="#" class="scroll-down" address="true"></a>
+        </section>
+       
+        
 </Section>
 <!--Species-->
 <section class="species">
@@ -579,7 +648,15 @@
     }
 </script>
 </section>
-
+<!--Scroll Down!-->
+<script>
+     $(function() {
+    $('.scroll-down').click (function() {
+      $('html, body').animate({scrollTop: $('section.ok').offset().top }, 'slow');
+      return false;
+    });
+  });
+</script>
 
 
 
